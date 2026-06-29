@@ -1,0 +1,18 @@
+{
+  "name": "bisicles-syntax",
+  "displayName": "BISICLES Config",
+  "version": "0.0.5",
+  "engines": { "vscode": "^1.0.0" },
+  "contributes": {
+    "languages": [{
+      "id": "bisicles",
+      "filenamePatterns": ["inputs.*", "*.inputs"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "bisicles",
+      "scopeName": "source.bisicles",
+      "path": "./syntaxes/bisicles.tmLanguage.json"
+    }]
+  }
+}

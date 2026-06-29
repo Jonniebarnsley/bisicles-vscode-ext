@@ -1,0 +1,31 @@
+{
+  "name": "BISICLES",
+  "scopeName": "source.bisicles",
+  "patterns": [
+    { "include": "#comment" },
+    { "include": "#placeholder" },
+    { "include": "#key" },
+    { "include": "#boolean" }
+  ],
+  "repository": {
+    "comment": {
+      "name": "comment.line.number-sign.bisicles",
+      "match": "#.*$"
+    },
+    "placeholder": {
+      "name": "variable.other.placeholder.bisicles",
+      "match": "@[a-zA-Z]+"
+    },
+    "key": {
+      "match": "^\\s*([a-zA-Z_][a-zA-Z0-9_.]*)(\\s*=)",
+      "captures": {
+        "1": { "name": "entity.name.tag.key.bisicles" },
+        "2": { "name": "keyword.operator.assignment.bisicles" }
+      }
+    },
+    "boolean": {
+      "name": "constant.language.boolean.bisicles",
+      "match": "\\b(true|false)\\b"
+    }
+  }
+}
